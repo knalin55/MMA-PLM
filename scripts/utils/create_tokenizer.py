@@ -1,3 +1,10 @@
+"""Train and save custom WordPiece tokenizers from one or more language corpora.
+
+This script builds a BERT-style WordPiece tokenizer using train/val/test files for the
+provided languages, applies standard special-token post-processing, and writes a tokenizer
+JSON artifact for downstream training pipelines.
+"""
+
 from transformers import AutoTokenizer
 import os
 import random
