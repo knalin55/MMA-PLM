@@ -1,3 +1,10 @@
+"""Train FastText-based token embeddings for a language and export aligned embedding artifacts.
+
+This script builds token embeddings from monolingual corpora using FastText, initializes
+special-token vectors from multilingual BERT, and saves both initial and alignment-refined
+embedding matrices for downstream MLM experiments.
+"""
+
 from transformers import PreTrainedTokenizerFast
 from transformers import AutoTokenizer, BertModel
 import torch
