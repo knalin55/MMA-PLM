@@ -1,0 +1,12 @@
+conllu
+datasets
+evaluate
+flash-attn
+gensim
+numpy==1.26.4
+pandas==2.2.3
+peft==0.17.0
+scikit-learn==1.6.1
+scipy==1.13.1
+torch==2.0.1
+transformers==4.47.0
