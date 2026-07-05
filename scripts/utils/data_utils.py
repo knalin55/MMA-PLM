@@ -26,7 +26,7 @@ def preprocess_batch(
 class customDataset():
     """Orchestrates multilingual dataset loading, tokenization, and preprocessing for masked language modeling."""
 
-    def __init__(self, langs: str, args: argparse.Namespace, cache_dir: str = "/home/nkumar/personal_work_ms/nkumar/.cache"):
+    def __init__(self, langs: str, args: argparse.Namespace, cache_dir: str = "./cache"):
         """
         Initialize customDataset with language list and configuration.
 
@@ -108,11 +108,11 @@ class customDataset():
         """
         if self.args.vocab == "custom":
             tokenizer = transformers.PreTrainedTokenizerFast(
-                tokenizer_file=f"/home/nkumar/personal_work_troja/nkumar/phd_thesis/experiments/plugnplay/experiments/data/tokens/{lang}.json"
+                tokenizer_file=f"./data/tokens/{lang}.json"
             )
         elif self.args.vocab == "mix":
             tokenizer = transformers.PreTrainedTokenizerFast(
-                tokenizer_file=f"/home/nkumar/personal_work_troja/nkumar/phd_thesis/experiments/plugnplay/experiments/data/tokens/br_ga_cy.json"
+                tokenizer_file=f"./data/tokens/br_ga_cy.json"
             )
         else:
             tokenizer = self.shared_tokenizer
