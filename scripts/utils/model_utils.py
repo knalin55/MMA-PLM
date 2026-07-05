@@ -1,3 +1,11 @@
+"""Model utility helpers for MLM training metrics, embedding construction, and embedding freezing.
+
+This module provides functions to compute token-level accuracy on non-masked positions,
+prepare logits for metric computation, load or synthesize embedding matrices from multiple
+sources (FastText, model-derived, random), and inject/freeze embeddings in supported
+Transformer model architectures.
+"""
+
 import os
 from collections import defaultdict
 from pathlib import Path
