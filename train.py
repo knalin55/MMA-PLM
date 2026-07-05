@@ -19,8 +19,8 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Train a masked language model across multiple languages.")
 
     parser.add_argument("--embed_path", default=None, type=str, help="Path to a precomputed embedding file.")
-    parser.add_argument("--embed", default=None, type=str, help="Embedding type: model/fasttext/muse/muse_swapped/isovec")
-    parser.add_argument("--vocab", default=None, type=str, help="Vocabulary source: custom/mix/model.")
+    parser.add_argument("--embed", default="model", type=str, help="Embedding type: model/fasttext/muse/muse_swapped/isovec")
+    parser.add_argument("--vocab", default="custom", type=str, help="Vocabulary source: custom/mix/model.")
     parser.add_argument("--train", default="full", type=str, help="Training mode: full/nonEmb/embOnly.")
     parser.add_argument("--model", default="google-bert/bert-base-multilingual-cased", type=str, help="Base transformer model to use.")
     parser.add_argument("--batch_size", default=64, type=int, help="Batch size for training.")
