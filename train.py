@@ -60,7 +60,7 @@ def main(args: argparse.Namespace) -> None:
     transformers.set_seed(args.seed)
 
     # Define dataset and cache paths
-    data_root = "/home/nkumar/personal_work_troja/nkumar/phd_thesis/experiments/plugnplay/experiments/data/mono"
+    data_root = "./data/mono"
     cache_dir = Path(CACHE_DIR)
 
     # Load and tokenize datasets for all languages
